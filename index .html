@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¿Quieres salir conmigo?</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #333;
+      margin: 0;
+    }
+
+    p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .gatitos {
+      width: 120px;
+      margin-bottom: 20px;
+      animation: flotar 3s ease-in-out infinite;
+    }
+
+    @keyframes flotar {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .botones {
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      padding: 10px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 2px 2px 8px #ccc;
+    }
+
+    #si {
+      background-color: #ff5e99;
+      color: white;
+    }
+
+    #no {
+      background-color: #eee;
+      color: #333;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Imagen flotante -->
+  <div class="tenor-gif-embed" data-postid="15594238" data-share-method="host" data-aspect-ratio="1.23552" data-width="20%"><a href="https://tenor.com/view/love-cat-basket-of-hearts-mochi-peach-gif-15594238">Love Cat Sticker</a>from <a href="https://tenor.com/search/love-stickers">Love Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  
+  <h1>¿Quieres ser mi novia? 🥹</h1>
+  <p>Eres la persona más especial del mundo 💖</p>
+
+  <div class="botones">
+    <button id="si" onclick="aceptar()">SÍ</button>
+    <button id="no" onmouseover="moverNo()">NO</button>
+  </div>
+
+  <script>
+    function moverNo() {
+      const no = document.getElementById("no");
+      const x = Math.floor(Math.random() * 300) - 150;
+      const y = Math.floor(Math.random() * 300) - 150;
+      no.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    function aceptar() {
+      document.body.innerHTML = `
+        <h1 style="color: #ff4d88;">¡Yay! 💕</h1>
+        <p style="font-size: 20px;">¡Sabía que dirías que sí! 🥰</p>
+        <img src="https://media.tenor.com/Tdog96lxqZAAAAAi/mochi-cat-chibi-cat.gif" alt="gatitos abrazados" style="width: 150px; margin-top: 20px; animation: flotar 2.5s infinite ease-in-out;">
+    
+      `;
+      
+    }
+  </script>
+
+</body>
+</html>
